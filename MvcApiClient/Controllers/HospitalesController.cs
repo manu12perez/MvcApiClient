@@ -19,6 +19,12 @@ namespace MvcApiClient.Controllers
             return View(hospitales);
         }
 
+        public async Task<IActionResult> Details(int id)
+        {
+            Hospital hospital = await this.service.FindHospitalAsync(id);
+            return View(hospital);
+        }
+
         public IActionResult Index()
         {
             return View();

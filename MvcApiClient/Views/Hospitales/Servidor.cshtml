@@ -24,6 +24,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Camas)
             </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -43,6 +44,14 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Camas)
+            </td>
+            <td>
+                <a asp-controller="Hospitales"
+                    asp-action="Details"
+                    asp-route-id="@item.IdHospital"
+                    class="btn btn-info">
+                    Detalles
+                </a>
             </td>
         </tr>
 }
