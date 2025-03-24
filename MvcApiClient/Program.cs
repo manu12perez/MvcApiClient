@@ -1,5 +1,12 @@
+using MvcApiClient.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
+
+/****************************************************************************************************/
+// Registro de repositorios o servicios
+builder.Services.AddTransient<ServiceHospitales>();
+/****************************************************************************************************/
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
